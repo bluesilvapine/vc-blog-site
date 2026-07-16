@@ -1,0 +1,58 @@
+---
+title: "Why I Stopped Fear-ing Vibecoding"
+date: "2026-07-16"
+category: "personal"
+excerpt: "I used to think vibecoding would make me less knowledgeable, but I realized it can help me move past friction and build the small things that matter."
+---
+
+I used to be scared of vibecoding.
+
+Not because I thought it was useless, but because I was afraid it would make me lazy. I worried that leaning on AI too much would somehow stunt my computer knowledge, make me forget how things work, or turn me into someone who only knew how to ask for things instead of building them myself. In my head, it felt like a shortcut that would eventually leave me weaker.
+
+That fear made me overthink everything.
+
+I would start a project, get excited, and then immediately spiral into questions like: "Am I learning enough? Am I doing this the 'right' way? If I use AI, will I lose the deeper understanding I want?" It became harder to begin because I was treating every project like a test of my worth as a developer.
+
+What I realized later — a little too late, honestly — is that I do not need to be attached to every project I start.
+
+I do not need to force myself to build the big milestone projects right away just because they feel important. Some of the most useful work is not the grand thing. It is the small, awkward, in-between step that makes the whole experience smoother. AI helps with that. It can help me remove friction, get unstuck, and move forward without turning every session into a struggle.
+
+That does not mean I should use AI to build a full text editor if I do not want to. It means I can use it to make a blog site, or a random project picker, or a tiny tool that helps me stay consistent. I do not need to build the things I am not interested in just because they look impressive.
+
+The real shift for me was this: I stopped thinking of AI as something that replaces my growth and started seeing it as something that helps me get out of my own way.
+
+I used to have a recurring issue with picking up a project and starting. I would get stuck in the planning phase, or I would overcomplicate the idea, or I would lose momentum before I even made the first meaningful move. Vibecoding helped with that by giving me a way to start faster. I even built a random project picker with extra features like logging progress reports, which sounds small, but it made the whole process feel more real and more sustainable.
+
+That mattered more than I expected.
+
+It is not about avoiding effort. It is about reducing the friction between idea and action. And maybe that is enough to begin.
+
+Maybe the point is not to build the perfect project. Maybe the point is to build enough momentum to keep going.
+
+```tsx
+// src/app/users/page.tsx
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+export default async function UsersPage() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users: User[] = await res.json();
+
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold">Users List</h1>
+      <ul className="divide-y divide-border">
+        {users.map((user) => (
+          <li key={user.id} className="py-2">
+            <p className="font-medium">{user.name}</p>
+            <p className="text-sm text-secondary">{user.email}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
