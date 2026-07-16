@@ -1,0 +1,27 @@
+---
+title: "Why I Still Use Vim and the Gruvbox Theme"
+date: "2026-06-01"
+category: "technical"
+excerpt: "A look into my daily driver configuration: Vim, Gruvbox Light, and why terminal aesthetics matter for sustained productivity."
+---
+
+Lately, I've had several colleagues ask why my editor looks like it belongs in the early 90s. The answer is simple: **Gruvbox** and a well-configured terminal-based workflow.
+
+I've experimented with many color schemes—Solarized, Nord, Dracula, One Dark—but I always find myself returning to Gruvbox. Specifically, **Gruvbox Light** (medium contrast).
+
+### Under the Hood: Vim Statusline Config
+
+No vim setup is complete without a solid status bar. I use a custom lightweight statusline inspired by **vim-airline**. Here is a snippet of my `.vimrc` to configure the color segments:
+
+```vim
+" Custom Airline-style statusline in Vim
+set laststatus=2
+set statusline=
+set statusline+=%#DiffAdd#\ --\ NORMAL\ --\ 
+set statusline+=%#Visual#\ %f\ 
+set statusline+=%#DiffDelete#\ %m%r%w\ 
+set statusline+=%=
+set statusline+=%#DiffChange#\ %Y\ 
+set statusline+=%#CursorLine#\ %{&fileencoding?&fileencoding:&encoding}\ 
+set statusline+=%#DiffAdd#\ %l/%L\ 
+```
